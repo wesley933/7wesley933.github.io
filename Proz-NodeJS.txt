@@ -1,0 +1,29 @@
+os clientes sao os dispositivos  conectados a internet do usuario, 
+como um pc conectado ao wifi e os servidores sao computadores que armazenam paginas da web, sites ou apps 
+
+-cd desktop
+-cd projeto_node
+-npm init
+-enter 5x
+-yes
+-index.js
+-npm install --save express
+
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+
+const server = http.createServer((req,res) => {
+  res.statusCode = 200;
+  res.serHeader('Content-Type','text/plain');
+  res.end('Olá mundo');
+});
+
+server.listen(port,hostname, () => {
+   console.log("servidor rodando");
+})
+
+-node index.js
+
